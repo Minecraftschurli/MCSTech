@@ -11,9 +11,11 @@
         "tag": "forge:sand"
       }
     ],
-    "X": {
-      "tag": "forge:dusts/iron"
-    }
+    "X": [
+      {
+        "tag": "forge:dusts/iron"
+      }
+    ]
   },
   "result": {
     "item": "mcsutilities:iron_metallic_sand"

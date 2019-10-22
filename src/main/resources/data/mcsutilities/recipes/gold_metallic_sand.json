@@ -11,9 +11,11 @@
         "tag": "forge:sand"
       }
     ],
-    "X": {
-      "tag": "forge:dusts/gold"
-    }
+    "X": [
+      {
+        "tag": "forge:dusts/gold"
+      }
+    ]
   },
   "result": {
     "item": "mcsutilities:gold_metallic_sand"
