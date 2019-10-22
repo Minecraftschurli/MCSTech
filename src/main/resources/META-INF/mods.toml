@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[28,)"
+
+[[mods]]
+    modId="mcstech"
+    version="${file.jarVersion}"
+    displayName="MCSTech"
+    authors="Minecraftschurli"
+    description=''''''
+[[dependencies.mcstech]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.14.4]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.mcstech]]
+    modId="forge"
+    mandatory=true
+    versionRange="[28,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.mcstech]]
+    modId="mcslib"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="BEFORE"
+    side="BOTH"
