@@ -1,0 +1,9 @@
+{
+  "type": "mcstech:grinding",
+  "ingredient": {
+    "tag": "forge:ores/iron"
+  },
+  "result": "mcstech:iron_dust",
+  "amount": 2,
+  "cookingtime": 200
+}

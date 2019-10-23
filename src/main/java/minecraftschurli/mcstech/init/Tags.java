@@ -1,4 +1,4 @@
-package minecraftschurli.mcstech;
+package minecraftschurli.mcstech.init;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

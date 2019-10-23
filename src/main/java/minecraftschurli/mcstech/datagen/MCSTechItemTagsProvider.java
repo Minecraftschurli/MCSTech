@@ -1,7 +1,7 @@
 package minecraftschurli.mcstech.datagen;
 
-import minecraftschurli.mcstech.Register;
-import minecraftschurli.mcstech.Tags;
+import minecraftschurli.mcstech.init.Items;
+import minecraftschurli.mcstech.init.Tags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
 import net.minecraft.tags.Tag;
@@ -99,8 +99,8 @@ public class MCSTechItemTagsProvider extends ItemTagsProvider {
                 Tags.Items.DUSTS_IRON
         );
 
-        getBuilder(Tags.Items.DUSTS_GOLD).add(Register.GOLD_DUST.get());
-        getBuilder(Tags.Items.DUSTS_IRON).add(Register.IRON_DUST.get());
+        getBuilder(Tags.Items.DUSTS_GOLD).add(Items.GOLD_DUST.get());
+        getBuilder(Tags.Items.DUSTS_IRON).add(Items.IRON_DUST.get());
 
         /*this.copy(Tags.Blocks.STORAGE_BLOCKS_ALUMINIUM, Tags.Items.STORAGE_BLOCKS_ALUMINIUM);
         this.copy(Tags.Blocks.STORAGE_BLOCKS_TIN, Tags.Items.STORAGE_BLOCKS_TIN);

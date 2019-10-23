@@ -1,0 +1,8 @@
+{
+    "parent": "block/orientable",
+    "textures": {
+        "top": "mcstech:block/grinder_top",
+        "front": "mcstech:block/grinder_front",
+        "side": "mcstech:block/grinder_side"
+    }
+}

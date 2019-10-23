@@ -1,10 +1,7 @@
 package minecraftschurli.mcstech.datagen;
 
-import minecraftschurli.mcstech.Register;
-import minecraftschurli.mcstech.Tags;
 import net.minecraft.data.BlockTagsProvider;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.item.BlockItem;
 import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
 

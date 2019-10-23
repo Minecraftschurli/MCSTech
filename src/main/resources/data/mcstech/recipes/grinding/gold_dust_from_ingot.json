@@ -1,0 +1,8 @@
+{
+  "type": "mcstech:grinding",
+  "ingredient": {
+    "tag": "forge:ingots/gold"
+  },
+  "result": "mcstech:gold_dust",
+  "cookingtime": 200
+}

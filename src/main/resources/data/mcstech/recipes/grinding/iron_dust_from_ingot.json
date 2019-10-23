@@ -1,0 +1,8 @@
+{
+  "type": "mcstech:grinding",
+  "ingredient": {
+    "tag": "forge:ingots/iron"
+  },
+  "result": "mcstech:iron_dust",
+  "cookingtime": 200
+}

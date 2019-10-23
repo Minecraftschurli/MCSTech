@@ -1,0 +1,8 @@
+{
+  "type": "mcstech:grinding",
+  "ingredient": {
+    "item": "minecraft:cobblestone"
+  },
+  "result": "minecraft:gravel",
+  "cookingtime": 200
+}
