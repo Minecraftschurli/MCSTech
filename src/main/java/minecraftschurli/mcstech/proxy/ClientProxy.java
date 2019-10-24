@@ -1,7 +1,6 @@
 package minecraftschurli.mcstech.proxy;
 
-import minecraftschurli.mcstech.grinder.GrinderContainer;
-import minecraftschurli.mcstech.grinder.GrinderScreen;
+import minecraftschurli.mcstech.machines.grinder.GrinderScreen;
 import minecraftschurli.mcstech.init.ContainerTypes;
 import net.minecraft.client.gui.ScreenManager;
 

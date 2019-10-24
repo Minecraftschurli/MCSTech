@@ -1,6 +1,6 @@
 package minecraftschurli.mcstech.init;
 
-import minecraftschurli.mcstech.grinder.GrinderTE;
+import minecraftschurli.mcstech.machines.grinder.GrinderTE;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.fml.RegistryObject;
 

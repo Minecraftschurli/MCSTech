@@ -80,7 +80,7 @@ public class MCSTechBlockTagsProvider extends BlockTagsProvider {
     @Override
     @Nonnull
     public String getName() {
-        return "MCSTech Block Tags";
+        return "MCSTech BlockTags";
     }
 
 }

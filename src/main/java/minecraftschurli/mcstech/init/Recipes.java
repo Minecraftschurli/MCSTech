@@ -1,8 +1,8 @@
 package minecraftschurli.mcstech.init;
 
 import minecraftschurli.mcstech.MCSTech;
-import minecraftschurli.mcstech.grinder.GrinderRecipe;
-import minecraftschurli.mcstech.grinder.GrinderRecipeSerializer;
+import minecraftschurli.mcstech.machines.grinder.GrinderRecipe;
+import minecraftschurli.mcstech.machines.grinder.GrinderRecipeSerializer;
 import net.minecraft.item.crafting.*;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.RegistryObject;

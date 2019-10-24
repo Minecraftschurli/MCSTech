@@ -14,7 +14,7 @@ public interface IInit {
     ItemGroup GROUP = new ItemGroup(MODID) {
         @Override
         public ItemStack createIcon() {
-            return ItemStack.EMPTY;
+            return new ItemStack(Blocks.GRINDER.get());
         }
     };
     Item.Properties STANDARD_ITEM_PROPERTIES = new Item.Properties().group(GROUP);

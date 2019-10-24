@@ -1,9 +1,13 @@
 package minecraftschurli.mcstech.datagen;
 
+import minecraftschurli.mcslib.data.BaseItemTagsProvider;
+import minecraftschurli.mcslib.data.TagHelper;
 import minecraftschurli.mcstech.init.Items;
+import minecraftschurli.mcstech.init.Materials;
 import minecraftschurli.mcstech.init.Tags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.ItemTagsProvider;
+import net.minecraft.item.Item;
 import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
 
@@ -17,7 +21,7 @@ import java.util.stream.Collectors;
  * @author Minecraftschurli
  * @version 2019-10-22
  */
-public class MCSTechItemTagsProvider extends ItemTagsProvider {
+public class MCSTechItemTagsProvider extends BaseItemTagsProvider {
 
     private Set<ResourceLocation> filter = null;
 
@@ -27,10 +31,17 @@ public class MCSTechItemTagsProvider extends ItemTagsProvider {
 
     @Override
     public void registerTags() {
-        super.registerTags();
+        registerSuperTags();
 
         this.filter = this.tagToBuilder.keySet().stream().map(Tag::getId).collect(Collectors.toSet());
-        
+
+        Materials.STEEL.registerItemTags(this);
+
+        getBuilder(TagHelper.getTag(TagHelper.TagType.DUST, "gold")).add(Items.GOLD_DUST.get());
+        getBuilder(TagHelper.getTag(TagHelper.TagType.DUST, "iron")).add(Items.IRON_DUST.get());
+
+        TagHelper.registerTagsToParent(this::getBuilder);
+
         /*getBuilder(Tags.Items.INGOTS_ALUMINIUM).add(Register.ALUMINIUM.get("ingot"));
         getBuilder(Tags.Items.INGOTS_TIN).add(Register.TIN.get("ingot"));
         getBuilder(Tags.Items.INGOTS_COPPER).add(Register.COPPER.get("ingot"));
@@ -38,69 +49,65 @@ public class MCSTechItemTagsProvider extends ItemTagsProvider {
         getBuilder(Tags.Items.INGOTS_LEAD).add(Register.LEAD.get("ingot"));
         getBuilder(Tags.Items.INGOTS_ZINC).add(Register.ZINC.get("ingot"));
         getBuilder(Tags.Items.INGOTS_TITANIUM).add(Register.TITANIUM.get("ingot"));
-        getBuilder(Tags.Items.INGOTS_NICKEL).add(Register.NICKEL.get("ingot"));
-        getBuilder(Tags.Items.INGOTS_STEEL).add(Register.STEEL.get("ingot"));
+        getBuilder(Tags.Items.INGOTS_NICKEL).add(Register.NICKEL.get("ingot"));*/
 
-        getBuilder(net.minecraftforge.common.Tags.Items.INGOTS).add(
-                Tags.Items.INGOTS_ALUMINIUM,
+        /*getBuilder(net.minecraftforge.common.Tags.Items.INGOTS).add(
+                *//*Tags.Items.INGOTS_ALUMINIUM,
                 Tags.Items.INGOTS_TIN,
                 Tags.Items.INGOTS_COPPER,
                 Tags.Items.INGOTS_SILVER,
-                Tags.Items.INGOTS_LEAD,
-                Tags.Items.INGOTS_STEEL,
-                Tags.Items.INGOTS_ZINC,
+                Tags.Items.INGOTS_LEAD,*//*
+                Tags.Items.INGOTS_STEEL//,
+                *//*Tags.Items.INGOTS_ZINC,
                 Tags.Items.INGOTS_TITANIUM,
-                Tags.Items.INGOTS_NICKEL
-        );
+                Tags.Items.INGOTS_NICKEL*//*
+        );*/
 
-        getBuilder(Tags.Items.NUGGETS_ALUMINIUM).add(Register.ALUMINIUM.get("nugget"));
+        /*getBuilder(Tags.Items.NUGGETS_ALUMINIUM).add(Register.ALUMINIUM.get("nugget"));
         getBuilder(Tags.Items.NUGGETS_TIN).add(Register.TIN.get("nugget"));
         getBuilder(Tags.Items.NUGGETS_COPPER).add(Register.COPPER.get("nugget"));
         getBuilder(Tags.Items.NUGGETS_SILVER).add(Register.SILVER.get("nugget"));
         getBuilder(Tags.Items.NUGGETS_LEAD).add(Register.LEAD.get("nugget"));
         getBuilder(Tags.Items.NUGGETS_ZINC).add(Register.ZINC.get("nugget"));
         getBuilder(Tags.Items.NUGGETS_TITANIUM).add(Register.TITANIUM.get("nugget"));
-        getBuilder(Tags.Items.NUGGETS_NICKEL).add(Register.NICKEL.get("nugget"));
-        getBuilder(Tags.Items.NUGGETS_STEEL).add(Register.STEEL.get("nugget"));
+        getBuilder(Tags.Items.NUGGETS_NICKEL).add(Register.NICKEL.get("nugget"));*/
+        //getBuilder(Tags.Items.NUGGETS_STEEL).add(Register.STEEL.get("nugget"));
 
-        getBuilder(net.minecraftforge.common.Tags.Items.NUGGETS).add(
-                Tags.Items.NUGGETS_ALUMINIUM,
+        /*getBuilder(net.minecraftforge.common.Tags.Items.NUGGETS).add(
+                *//*Tags.Items.NUGGETS_ALUMINIUM,
                 Tags.Items.NUGGETS_TIN,
                 Tags.Items.NUGGETS_COPPER,
                 Tags.Items.NUGGETS_SILVER,
-                Tags.Items.NUGGETS_LEAD,
+                Tags.Items.NUGGETS_LEAD,*//*
                 Tags.Items.NUGGETS_STEEL,
-                Tags.Items.NUGGETS_ZINC,
+                *//*Tags.Items.NUGGETS_ZINC,
                 Tags.Items.NUGGETS_TITANIUM,
-                Tags.Items.NUGGETS_NICKEL
-        );
+                Tags.Items.NUGGETS_NICKEL*//*
+        );*/
 
-        getBuilder(Tags.Items.DUSTS_ALUMINIUM).add(Register.ALUMINIUM.get("dust"));
+        /*getBuilder(Tags.Items.DUSTS_ALUMINIUM).add(Register.ALUMINIUM.get("dust"));
         getBuilder(Tags.Items.DUSTS_TIN).add(Register.TIN.get("dust"));
         getBuilder(Tags.Items.DUSTS_COPPER).add(Register.COPPER.get("dust"));
         getBuilder(Tags.Items.DUSTS_SILVER).add(Register.SILVER.get("dust"));
         getBuilder(Tags.Items.DUSTS_LEAD).add(Register.LEAD.get("dust"));
         getBuilder(Tags.Items.DUSTS_ZINC).add(Register.ZINC.get("dust"));
         getBuilder(Tags.Items.DUSTS_TITANIUM).add(Register.TITANIUM.get("dust"));
-        getBuilder(Tags.Items.DUSTS_NICKEL).add(Register.NICKEL.get("dust"));
-        getBuilder(Tags.Items.DUSTS_STEEL).add(Register.STEEL.get("dust"));*/
+        getBuilder(Tags.Items.DUSTS_NICKEL).add(Register.NICKEL.get("dust"));*/
+        //getBuilder(Tags.Items.DUSTS_STEEL).add(Register.STEEL.get("dust"));
 
-        getBuilder(net.minecraftforge.common.Tags.Items.DUSTS).add(
-                /*Tags.Items.DUSTS_ALUMINIUM,
+        /*getBuilder(net.minecraftforge.common.Tags.Items.DUSTS).add(
+                *//*Tags.Items.DUSTS_ALUMINIUM,
                 Tags.Items.DUSTS_TIN,
                 Tags.Items.DUSTS_COPPER,
                 Tags.Items.DUSTS_SILVER,
-                Tags.Items.DUSTS_LEAD,
+                Tags.Items.DUSTS_LEAD,*//*
                 Tags.Items.DUSTS_STEEL,
-                Tags.Items.DUSTS_ZINC,
+                *//*Tags.Items.DUSTS_ZINC,
                 Tags.Items.DUSTS_TITANIUM,
-                Tags.Items.DUSTS_NICKEL*/
+                Tags.Items.DUSTS_NICKEL*//*
                 Tags.Items.DUSTS_GOLD,
                 Tags.Items.DUSTS_IRON
-        );
-
-        getBuilder(Tags.Items.DUSTS_GOLD).add(Items.GOLD_DUST.get());
-        getBuilder(Tags.Items.DUSTS_IRON).add(Items.IRON_DUST.get());
+        );*/
 
         /*this.copy(Tags.Blocks.STORAGE_BLOCKS_ALUMINIUM, Tags.Items.STORAGE_BLOCKS_ALUMINIUM);
         this.copy(Tags.Blocks.STORAGE_BLOCKS_TIN, Tags.Items.STORAGE_BLOCKS_TIN);
@@ -132,7 +139,7 @@ public class MCSTechItemTagsProvider extends ItemTagsProvider {
     @Override
     @Nonnull
     public String getName() {
-        return "MCSTech Item Tags";
+        return "MCSTech ItemTags";
     }
 
 }

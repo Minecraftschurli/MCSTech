@@ -2,6 +2,7 @@ package minecraftschurli.mcstech.init;
 
 import minecraftschurli.mcslib.objects.Material;
 import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.MaterialColor;
 
 import static minecraftschurli.mcstech.MCSTech.BLOCKS;
@@ -82,7 +83,7 @@ public class Materials implements IInit {
             .withDust(STANDARD_ITEM_PROPERTIES);*/
 
     public static final Material STEEL = new Material("steel")
-            .withStorageBlock(Block.Properties.create(net.minecraft.block.material.Material.IRON, MaterialColor.GRAY), STANDARD_ITEM_PROPERTIES)
+            .withStorageBlock(Block.Properties.create(net.minecraft.block.material.Material.IRON, MaterialColor.GRAY).hardnessAndResistance(6.0F, 100.0F).sound(SoundType.METAL), STANDARD_ITEM_PROPERTIES)
             .withIngot(STANDARD_ITEM_PROPERTIES)
             .withNugget(STANDARD_ITEM_PROPERTIES)
             .withDust(STANDARD_ITEM_PROPERTIES);

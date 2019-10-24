@@ -7,6 +7,7 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
 
+import static minecraftschurli.mcslib.data.TagHelper.forgeTag;
 import static minecraftschurli.mcstech.MCSTech.MODID;
 
 /**
@@ -111,15 +112,8 @@ public class Tags {
         public static final Tag<Item> DUSTS_NICKEL = forgeTag("dusts/nickel");
         public static final Tag<Item> DUSTS_TITANIUM = forgeTag("dusts/titanium");
         public static final Tag<Item> DUSTS_STEEL = forgeTag("dusts/steel");*/
-        public static final Tag<Item> DUSTS_GOLD = forgeTag("dusts/gold");
-        public static final Tag<Item> DUSTS_IRON = forgeTag("dusts/iron");
+        /*public static final Tag<Item> DUSTS_GOLD = forgeTag("dusts/gold");
+        public static final Tag<Item> DUSTS_IRON = forgeTag("dusts/iron");*/
 
-        private static Tag<Item> tag(String name) {
-            return new ItemTags.Wrapper(new ResourceLocation(MODID, name));
-        }
-
-        private static Tag<Item> forgeTag(String name) {
-            return new ItemTags.Wrapper(new ResourceLocation("forge", name));
-        }
     }
 }

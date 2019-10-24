@@ -1,6 +1,6 @@
 package minecraftschurli.mcstech.init;
 
-import minecraftschurli.mcstech.grinder.GrinderBlock;
+import minecraftschurli.mcstech.machines.grinder.GrinderBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.fml.RegistryObject;

@@ -1,6 +1,6 @@
 package minecraftschurli.mcstech.init;
 
-import minecraftschurli.mcstech.grinder.GrinderContainer;
+import minecraftschurli.mcstech.machines.grinder.GrinderContainer;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraftforge.common.extensions.IForgeContainerType;
 import net.minecraftforge.fml.RegistryObject;

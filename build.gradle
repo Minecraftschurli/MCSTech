@@ -48,6 +48,9 @@ minecraft {
                 mcstech {
                     source sourceSets.main
                 }
+                mcslib {
+                    source project(':MCSLib').sourceSets.main
+                }
             }
         }
 
@@ -63,6 +66,9 @@ minecraft {
             mods {
                 mcstech {
                     source sourceSets.main
+                }
+                mcslib {
+                    source project(':MCSLib').sourceSets.main
                 }
             }
         }
@@ -81,6 +87,9 @@ minecraft {
             mods {
                 mcstech {
                     source sourceSets.main
+                }
+                mcslib {
+                    source project(':MCSLib').sourceSets.main
                 }
             }
         }
